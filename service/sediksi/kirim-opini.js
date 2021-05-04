@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 const token = process.env.TRELLO_TOKEN
 const key = process.env.TRELLO_APP_KEY
 const auth = `key=${key}&token=${token}`

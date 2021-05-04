@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 require("dotenv").config()
 const port = process.env.PORT
-const { card } = require('./inc/api')
+const { card } = require('./service/sediksi/kirim-opini')
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.json());

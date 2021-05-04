@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 app.post('/sediksi/kirim-opini', (req, res) => {
     const data = req.body
     card.submit(data).then(response => {
+        console.log(response);
         res.json(response)
     }).catch(error => {
         res.status(404).json({

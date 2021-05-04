@@ -24,7 +24,7 @@ module.exports.card = {
         return await axios.post(
             `https://api.trello.com/1/cards/${cardID}/attachments?${auth}`,
             {
-                file: file,
+                url: file,
                 cover: cover,
                 ...config
             }
@@ -38,8 +38,8 @@ module.exports.card = {
             // berhasil membuat card
             .then(res => {
                 const card = res.data.id
-                const naskah = naskahBin
-                const foto = fotoBin
+                const naskah = data.naskah.file
+                const foto = data.penulis.foto
 
                 // upload naskah ke card yang telah dibuat
                 this.card.attach(naskah, card, false, {
